@@ -2618,7 +2618,7 @@ input, select, textarea {
 					height: 100%;
 					opacity: 1;
 					z-index: 1;
-					opacity: 0.4;
+					opacity: 0.5;
 				}
 
 				.tiles article > .image:after {
@@ -2706,7 +2706,7 @@ input, select, textarea {
 					}
 
 			.tiles article.style1 > .image:before {
-				background-color: #f2849e;
+				background-color: black;
 			}
 
 			.tiles article.style2 > .image:before {
@@ -2714,7 +2714,7 @@ input, select, textarea {
 			}
 
 			.tiles article.style3 > .image:before {
-				background-color: #7bd0c1;
+				background-color: black;
 			}
 
 			.tiles article.style4 > .image:before {
@@ -2738,7 +2738,7 @@ input, select, textarea {
 
 				body:not(.is-touch) .tiles article:hover > .image:before {
 					background-color: #000000;
-					opacity: 0.75;
+					opacity: 0.9;
 				}
 
 				body:not(.is-touch) .tiles article:hover > .image:after {
