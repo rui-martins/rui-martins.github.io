@@ -2828,11 +2828,6 @@ input, select, textarea {
 
 /* Header */
 
-.redText
-{
-    color: red;
-}
-
 	#header {
 		padding: 2em 0 0.1em 0 ;
 	}
