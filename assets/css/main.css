@@ -2563,6 +2563,13 @@ input, select, textarea {
 
 /* Tiles */
 
+.tileDesc {
+	bottom: -75px;
+	position: relative;
+	display: inline-block;
+	font-size: 14px;
+	color: #a8a8a8;
+}
 	.tiles {
 		display: -moz-flex;
 		display: -webkit-flex;
