@@ -251,6 +251,47 @@ input, select, textarea {
 
 		}
 
+	/* Gallery */
+
+	.gallery {
+		margin: 0 auto;
+		max-width: 100%;
+		width: 70em;
+		text-align: center;
+	}
+
+		@media screen and (max-width: 1680px) {
+
+			.gallery {
+				width: 68em;
+			}
+
+		}
+
+		@media screen and (max-width: 1280px) {
+
+			.gallery {
+				width: calc(100% - 80px);
+			}
+
+		}
+
+		@media screen and (max-width: 980px) {
+
+			.gallery {
+				width: calc(100% - 100px);
+			}
+
+		}
+
+		@media screen and (max-width: 736px) {
+
+			.gallery {
+				width: calc(100% - 40px);
+			}
+
+		}
+
 /* Row */
 
 	.row {
@@ -1530,20 +1571,19 @@ input, select, textarea {
 			margin: 0 0 2em 0;
 		}
 
-			.image.centered img {
+			.image.center {
 				margin: 0 auto;
-				width: auto;
+				display: block;
+				width: 270px;
 			}
-
-		.image.gallery {
-			width: 400px;
-			margin: 0 0.25em 0.5em 0.5em;
-		}
-			.image.gallery img {
-				max-height: 100%;
-				max-width: 100%;
+			.image.gallery {
+				width: 250px;
+				margin: 0 0.25em 0.5em 0.5em;
 			}
-
+				.image.gallery img {
+					max-height: 100%;
+					max-width: 100%;
+				}
 
 
 			#myImg {
