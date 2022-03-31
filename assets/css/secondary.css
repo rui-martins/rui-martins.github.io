@@ -1528,6 +1528,27 @@ input, select, textarea {
 		margin-bottom: 0;
 	}
 
+	/* IFrame Youtube Video */
+
+	.videoWrapper {
+		position: relative;
+  		/* falls back to 16/9, but otherwise uses ratio from HTML */
+  		padding-bottom: calc(var(--aspect-ratio, .5625) * 100%); 
+		height: 0;
+
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		width: 93%;
+	  }
+	  .videoWrapper iframe {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	  }
+
 /* Image */
 
 	.image {
@@ -1577,8 +1598,8 @@ input, select, textarea {
 				width: 270px;
 			}
 			.image.gallery {
-				width: 250px;
-				margin: 0 0.25em 0.5em 0.5em;
+				width: 450px;
+				margin: 0 0.25em 0.5em 0.3em;
 			}
 				.image.gallery img {
 					max-height: 100%;
@@ -1625,7 +1646,7 @@ input, select, textarea {
 				margin: auto;
 				display: block;
 				width: 80%;
-				max-width: 700px;
+				max-width: 1100px;
 			  }
 			  
 			  /* Caption of Modal Image */
