@@ -1539,7 +1539,7 @@ input, select, textarea {
 		display: block;
 		margin-left: auto;
 		margin-right: auto;
-		width: 93%;
+		width: 92.5%;
 	  }
 	  .videoWrapper iframe {
 		position: absolute;
@@ -1549,6 +1549,20 @@ input, select, textarea {
 		height: 100%;
 	  }
 
+	  .test {
+		display: inline-block;
+        border: 0px;
+		display: block;
+		width: 100%;
+		margin: 0 0 3.5em 0;
+		-moz-transition: opacity 0.25s ease-in-out;
+		-webkit-transition: opacity 0.25s ease-in-out;
+		-ms-transition: opacity 0.25s ease-in-out;
+		transition: opacity 0.25s ease-in-out;
+      }
+      .testhover:hover {
+        border: 1px solid #0814bf;
+      }
 /* Image */
 
 	.image {
@@ -1557,11 +1571,10 @@ input, select, textarea {
 		-ms-transition: opacity 0.25s ease-in-out;
 		transition: opacity 0.25s ease-in-out;
 		display: inline-block;
-		border: solid 6px #ebebeb !important;
 	}
 
 		.image:hover {
-			opacity: 0.9;
+			opacity: 0.8;
 		}
 
 		.image img {
@@ -1578,6 +1591,14 @@ input, select, textarea {
 			display: block;
 			width: 100%;
 			margin: 0 0 3.5em 0;
+			opacity: 1;
+		}
+
+		.image.featured2 {
+			display: block;
+			width: 100%;
+			margin: 0 0 3.5em 0;
+			border: none !important;
 		}
 
 		.image.left {
@@ -1599,7 +1620,7 @@ input, select, textarea {
 			}
 			.image.gallery {
 				width: 450px;
-				margin: 0 0.25em 0.5em 0.3em;
+				margin: 0 0em -0.3em 0em;
 			}
 				.image.gallery img {
 					max-height: 100%;
@@ -1609,7 +1630,6 @@ input, select, textarea {
 
 			#myImg {
 
-				border-radius: 5px;
 				cursor: pointer;
 				transition: 0.3s;
 			  }
