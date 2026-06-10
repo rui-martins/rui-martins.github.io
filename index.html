@@ -1,535 +1,368 @@
-﻿<!DOCTYPE HTML>
-<!--
-	Read Only by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Rui Martins - Portfolio</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Rui Martins — Software Engineer</title>
+<meta name="description" content="Rui Martins — Senior Software Engineer building resilient, event-driven systems. Lisbon, Portugal." />
 
-		<meta property='og:title' content='Rui Martins - Portfolio'/>
-		<meta property='og:image' content='https://rui-martins.github.io/images/website.png'/>
-		<meta property='og:description' content='My main focus is C# programming and Unity development. I always aim to write the fastest, most reusable and cleanest code.'/>
-		<meta property='og:url' content='https://rui-martins.github.io'/>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Familjen+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
 
-		<link rel="stylesheet" href="assets/css/main.css" />
-	</head>
-	<body class="is-preload">
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
 
-		<!-- Header -->
-			<section id="header">
-				<header>
-					<span class="image avatar"><img src="images/avatar.jpg" alt="" /></span>
-					<h1 id="logo"><a href="#">Rui Martins</a></h1>
-					<p>
-						Game Developer<br />
-						C# / Unity Programmer</p>
-						<p></p>
-							<a href="https://drive.google.com/drive/folders/1gB8fXGp5ZGXz_gVbk2KI9oas7PQyrCh8?usp=sharing" target="_blank" class="button alt small">CV</a>
-				</header>
-				<nav id="nav">
-					<ul>
-						<li><a href="#one" class="active">Who am I?</a></li>
-						<li><a href="#two">Things I Can Do</a></li>
-						<li><a href="#three">My Projects</a></li>
-						<li><a href="#four">Contact</a></li>
-					</ul>
-				</nav>
-				<footer>
-					<ul class="icons">
-						<li><a href="https://twitter.com/theruimartins" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-						<li><a href="https://facebook.com/theruimartins" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-						<li><a href="https://instagram.com/theruimartins" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-						<li><a href="https://github.com/rui-martins" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-						<li><a href="https://gitlab.com/rui-martins" class="icon brands fa-gitlab"><span class="label">Gitlab</span></a></li>
-						<li><a href="mailto:ruimart95@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-					</ul>
-				</footer>
-			</section>
+<div class="scrollbar" id="bar"></div>
+<div class="cursor" id="cur"></div>
+<div class="cursor-dot" id="curdot"></div>
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+<!-- ============ NAV ============ -->
+<nav id="nav">
+  <a href="#top" class="logo" data-cursor><span class="blink"></span>Rui&nbsp;Martins</a>
+  <div class="nav-links">
+    <a href="#about" data-nav><span>01</span>&nbsp;about</a>
+    <a href="#roadmap" data-nav><span>02</span>&nbsp;roadmap</a>
+    <a href="#skills" data-nav><span>03</span>&nbsp;stack</a>
+    <a href="#contact" class="nav-cta" data-cursor>Let's talk →</a>
+  </div>
+</nav>
 
-				<!-- Main -->
-					<div id="main">
+<!-- ============ HERO ============ -->
+<header class="hero" id="top">
+  <canvas id="net"></canvas>
+  <div class="wrap">
+    <div class="hero-status r">
+      <span>// software engineer</span>
+      <span id="tz">Lisbon, PT · UTC+1</span>
+      <span class="live">available for the next challenge</span>
+    </div>
 
-						<!-- One -->
-							<section id="one">
-								<!--<div class="image main" data-position="center">
-									<img src="images/banner.jpg" alt="" />
-								</div>-->
-								<div class="container">
-									<header class="major">
-										<h2>Who am I?</h2>
-										<p>A guy from sunny Lisbon, Portugal who loves programming and everything about game development.<br />
-									</header>
-									<p>Ever since I remember I've been crazy about games. I got my first console at five years old and 
-										I never stopped playing since that age. As a very curious person, I wanted to know the process 
-										behind creating games and that led me to pursue a Bachelor's degree in Game Development.</p>
-									<p>If half of me is made of games, the other half is made of music (especially heavy). I sing for the metal band <a href="https://betrayingthemartyrs.com/">Betraying the Martyrs</a>
-									and tour the world with them. It gives me a release of energy like nothing else in this life!</p>
-								</div>
-							</section>
+    <h1 aria-label="Rui Martins">
+      <span class="ln reveal-up"><i>RUI</i></span>
+      <span class="ln reveal-up"><i class="outline">MARTINS</i></span>
+    </h1>
 
-						<!-- Two -->
-							<section id="two">
-								<div class="container">
-									<h3>Things I can do!</h3>
-									<br>
-									<ul class="feature-icons">
-										<li class="icon solid fa-code">Write clean code from scratch</li>
-										<li class="icon solid fa-gamepad">Game Design</li>
-										<li class="icon solid fa-paint-brush">A bit of 3D Art</li>
-										<li class="icon solid fa-user-plus">Work in a collaborative way</li>
-										<li class="icon solid fa-book">Learn quickly</li>
-										<li class="icon solid fa-coffee">Drink a lot of coffee</li>
-										<p></p>
-										My main focus is C# programming and Unity development. I love to code gameplay features and tools.<br>
-										I have a good knowledge of SOLID principles and Design Patterns and try to apply those as much as possible to prevent unorganized code and obtain 
-										a fluid development when projects start to get big.<br><br>
-										I always aim to write the fastest, most reusable and cleanest code (with the use of interfaces, inheritance, generic methods, lambdas, etc.)<br><br>
+    <p class="hero-sub r">
+      I build the systems that <b>stay up</b> — resilient, event-driven backends
+      where data keeps flowing no matter what breaks. I started in
+      <b>game development</b>, and I still build like it: obsessed with how the thing <i>feels</i>.
+    </p>
 
-										Had the opportunity to work a bit with PHP and MySQL, mostly for highscores. Used Unity's Web Request API to send Get and Post requests through PHP scripts 
-										to retrieve and store data in MySQL databases.<br><br>
+    <div class="hero-meta r">
+      <div><span class="k">Now</span><span class="v">Senior Software Engineer @ Babel</span></div>
+      <div><span class="k">Focus</span><span class="v">.NET · React · SQL · Kafka · Microservices</span></div>
+      <div><span class="k">Since</span><span class="v">2020 · 5+ yrs shipping</span></div>
+    </div>
 
-										I also have some experience in working with C, JavaScript, and HTML.
-									</ul>
-								</div>
-							</section>
+    <a class="cv-btn r" href="RuiMartins_CV.pdf" download data-cursor>Download CV <span class="ar">↓</span></a>
+  </div>
+  <div class="scrollcue">SCROLL</div>
+</header>
 
-						<!-- Three -->
-							<section id="three">
-								<div class="container">
-									<h3>My projects</h3>
-									<br>
-									<p>Between college projects, game jams and professional projects, I've managed to create different games and you can see some below!</p>
-									
-									<div class="features">
-										<article>
-											<a href="happy-new-rocket.html" class="image"><img src="images/happy-new-rocket/pic01.jpg" alt="" /></a>
-											<div class="inner">
-												<h4>Happy New Rocket!</h4>
-												<p>Online multiplayer action game in which the players compete for the best fireworks show before time runs out.</p>
-											</div>
-										</article>
-										<article>
-											<a href="illuminants.html" class="image"><img src="images/illuminants/pic02.jpg" alt="" /></a>
-											<div class="inner">
-												<h4>Illuminants</h4>
-												<p>Puzzle game in which you simultaneously control 3 characters that need to reach their portals.</p>
-											</div>
-										</article>
-										<article>
-											<a href="herois-do-mar.html" class="image"><img src="images/herois-do-mar/pic02.jpg" alt="" /></a>
-											<div class="inner">
-												<h4>Heróis do Mar</h4>
-												<p>Arena brawler with portuguese historic figures and an arena that alludes to portuguese history.</p>
-											</div>
-										</article>
-										<article>
-											<a href="holy-hell.html" class="image"><img src="images/holy-hell/pic02.jpg" alt="" /></a>
-											<div class="inner">
-												<h4>Holy Hell</h4>
-												<p>Single-player action-adventure game where you have a personal vendetta against God and that leads 
-													you to wreak havoc in Heaven.</p>
-											</div>
-										</article>
-										<article>
-											<a href="missao360-reciclagem.html" class="image"><img src="images/missao360-reciclagem/pic03.jpg" alt="" /></a>
-											<div class="inner">
-												<h4>Missão 360 - Jogo da Reciclagem</h4>
-												<p>2D Endless runner side-scroller where you pick up the garbage left throughout the forest while learning about recycling.</p>
-											</div>
-										</article>
-										<article>
-											<a href="wheres-my.html" class="image"><img src="images/wheres-my/pic01.jpg" alt="" /></a>
-											<div class="inner">
-												<h4>Where's My...</h4>
-												<p>Top-Down Puzzle Game where you need to find your stuff by meticulously controlling them and yourself in opposite ways.</p>
-											</div>
-										</article>
-									</div>
-								</div>
-							</section>
+<!-- ============ ABOUT ============ -->
+<section class="sec" id="about">
+  <div class="wrap">
+    <div class="sec-head r">
+      <h2>From rendering<br>worlds to<br>routing data.</h2>
+      <span class="idx">[ 01 — profile ]</span>
+    </div>
+    <div class="about-grid">
+      <p class="about-lead r">
+        I spent my first years shipping <mark>VR rehab tools</mark> and
+        <mark>educational games</mark> in Unity. Then I went deep into the
+        backend — and found the same craft in <span class="c">resilient
+        microservices</span> that refuse to drop a message.
+      </p>
+      <div class="about-body r">
+        <p>
+          Today I design and own .NET services inside large-scale, event-driven
+          architectures — the kind with dozens of APIs, Kafka pipelines, retry
+          topics, dead-letter queues and a Redis layer that has to be fast and
+          never lie.
+        </p>
+        <p>
+          I lead backend teams, shape architecture, and care as much about a
+          0.3-second response as I once did about 60 frames per second.
+        </p>
+        <div class="about-tags">
+          <span>Backend Tech Lead</span><span>Event-Driven Systems</span>
+          <span>API Performance</span><span>Resilience &amp; Retries</span>
+          <span>AZ-900 Certified</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-						<!-- Four -->
-							<section id="four">
-								<div class="container">
-									<h3>Contact me</h3>
-									<p>You can reach me at <a href="mailto:ruimart95@gmail.com">ruimart95@gmail.com</a></p>
-									<!--
-									<form method="post" action="#">
-										<div class="row gtr-uniform">
-											<div class="col-6 col-12-xsmall"><input type="text" name="name" id="name" placeholder="Name" /></div>
-											<div class="col-6 col-12-xsmall"><input type="email" name="email" id="email" placeholder="Email" /></div>
-											<div class="col-12"><input type="text" name="subject" id="subject" placeholder="Subject" /></div>
-											<div class="col-12"><textarea name="message" id="message" placeholder="Message" rows="6"></textarea></div>
-											<div class="col-12">
-												<ul class="actions">
-													<li><input type="submit" class="primary" value="Send Message" /></li>
-													<li><input type="reset" value="Reset Form" /></li>
-												</ul>
-											</div>
-										</div>
-									</form>-->
-								</div>
-							</section>
+<!-- ============ ROADMAP / PIPELINE ============ -->
+<section class="sec" id="roadmap">
+  <div class="wrap">
+    <div class="sec-head r">
+      <h2>The pipeline.</h2>
+      <span class="idx">[ 02 — experience · 2020 → now ]</span>
+    </div>
 
-						<!-- Five -->
-						<!--
-							<section id="five">
-								<div class="container">
-									<h3>Elements</h3>
+    <div class="pipe" id="pipe">
+      <div class="pipe-rail">
+        <div class="pipe-fill" id="fill"></div>
+        <div class="packet" style="animation-delay:0s"></div>
+        <div class="packet" style="animation-delay:1.1s"></div>
+        <div class="packet" style="animation-delay:2.3s"></div>
+      </div>
 
-									<section>
-										<h4>Text</h4>
-										<p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>.
-										This is <sup>superscript</sup> text and this is <sub>subscript</sub> text.
-										This is <u>underlined</u> and this is code: <code>for (;;) { ... }</code>. Finally, <a href="#">this is a link</a>.</p>
-										<hr />
-										<header>
-											<h4>Heading with a Subtitle</h4>
-											<p>Lorem ipsum dolor sit amet nullam id egestas urna aliquam</p>
-										</header>
-										<p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit tempus accumsan.</p>
-										<header>
-											<h5>Heading with a Subtitle</h5>
-											<p>Lorem ipsum dolor sit amet nullam id egestas urna aliquam</p>
-										</header>
-										<p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit tempus accumsan.</p>
-										<hr />
-										<h2>Heading Level 2</h2>
-										<h3>Heading Level 3</h3>
-										<h4>Heading Level 4</h4>
-										<h5>Heading Level 5</h5>
-										<h6>Heading Level 6</h6>
-										<hr />
-										<h5>Blockquote</h5>
-										<blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in faucibus lorem ipsum dolor sit amet nullam adipiscing eu felis.</blockquote>
-										<h5>Preformatted</h5>
-										<pre><code>i = 0;
+      <!-- HEI-Lab -->
+      <article class="stage" data-stage>
+        <div class="stage-year">2020 — 2021</div>
+        <div class="node"></div>
+        <div class="card" data-tilt>
+          <div class="card-top">
+            <div class="co"><a href="https://hei-lab.ulusofona.pt/" target="_blank" rel="noopener" data-cursor>HEI-<em>Lab</em></a></div>
+          </div>
+          <div class="role">Software Developer<span class="dot">/</span><span class="rdate">Mar 2020 — May 2021</span><span class="dot">/</span><span class="rloc">Lisbon</span></div>
+          <div class="proj">
+            <div class="proj-h">
+              <span class="pname">Multiple projects</span>
+              <span class="pdate">Mar 2020 — May 2021</span>
+            </div>
+            <ul>
+              <li>Built <b>VR cognitive-rehabilitation experiences</b> in Unity, including tooling to capture and analyze biometric signals for behavioral research.</li>
+              <li>Developed a <b>.NET MVC</b> web app exposing APIs to store, retrieve and download biometric datasets.</li>
+            </ul>
+            <div class="chips"><span>Unity</span><span>C#</span><span>.NET MVC</span><span>Biometrics</span></div>
+          </div>
+        </div>
+      </article>
 
-while (!deck.isInOrder()) {
-    print 'Iteration ' + i;
-    deck.shuffle();
-    i++;
-}
+      <!-- Easylab -->
+      <article class="stage" data-stage>
+        <div class="stage-year">2021 — 2022</div>
+        <div class="node"></div>
+        <div class="card" data-tilt>
+          <div class="card-top">
+            <div class="co"><a href="https://www.easylabanimation.com" target="_blank" rel="noopener" data-cursor>Easy<em>lab</em></a></div>
+          </div>
+          <div class="role">Software Developer<span class="dot">/</span><span class="rdate">Jan 2021 — Dec 2022</span><span class="dot">/</span><span class="rloc">Lisbon</span></div>
+          <div class="proj">
+            <div class="proj-h">
+              <span class="pname">Multiple projects</span>
+              <span class="pdate">Jan 2021 — Dec 2022</span>
+            </div>
+            <ul>
+              <li>Created <b>gamified educational experiences</b> in Unity — browser-based games and an interactive book application.</li>
+              <li>Shipped a <b>cross-platform interactive book</b> in C# targeting Android, iOS and Web.</li>
+              <li>Integrated backend APIs to persist user progress, scores and app data.</li>
+            </ul>
+            <div class="chips"><span>Unity</span><span>C#</span><span>Cross-Platform</span><span>REST APIs</span></div>
+          </div>
+        </div>
+      </article>
 
-print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
-									</section>
+      <!-- Capgemini -->
+      <article class="stage" data-stage>
+        <div class="stage-year">2023 — 2025</div>
+        <div class="node"></div>
+        <div class="card" data-tilt>
+          <div class="card-top">
+            <div class="co"><a href="https://www.capgemini.com/pt-en/" target="_blank" rel="noopener" data-cursor>Cap<em>gemini</em></a></div>
+          </div>
+          <div class="roles">
+            <div class="rolestep">
+              <span class="rtitle">Software Engineer</span><span class="dot">/</span><span class="rdate">Mar 2023 — Dec 2023</span><span class="dot">/</span><span class="rloc">Lisbon</span>
+            </div>
+            <div class="rolestep up">
+              <span class="rtitle">Lead Software Engineer</span><span class="dot">/</span><span class="rdate">Jan 2024 — Mar 2025</span><span class="dot">/</span><span class="rloc">Lisbon</span>
+            </div>
+          </div>
+          <div class="proj">
+            <div class="proj-h">
+              <span class="pname">REN (Redes Energéticas Nacionais)</span>
+              <span class="pdate">Mar 2023 — Mar 2025</span>
+            </div>
+            <ul>
+              <li>Optimized a critical aggregation endpoint from <b>~16s to ~0.3s</b> across thousands of records.</li>
+              <li>Designed .NET APIs serving large datasets for responsive, user-driven data manipulation in a JS frontend.</li>
+              <li>Led frontend efforts and improved complex <b>data visualizations</b>.</li>
+              <li>Refactored core components for performance, scalability and maintainability.</li>
+              <li>Defined <b>coding standards</b>, led code reviews, coordinated sprint planning within Scrum.</li>
+            </ul>
+            <div class="chips"><span>.NET 6+</span><span>API Perf</span><span>JS / React</span><span>Scrum Lead</span></div>
+          </div>
+        </div>
+      </article>
 
-									<section>
-										<h4>Lists</h4>
-										<div class="row">
-											<div class="col-6 col-12-xsmall">
-												<h5>Unordered</h5>
-												<ul>
-													<li>Dolor pulvinar etiam magna etiam.</li>
-													<li>Sagittis adipiscing lorem eleifend.</li>
-													<li>Felis enim feugiat dolore viverra.</li>
-												</ul>
-												<h5>Alternate</h5>
-												<ul class="alt">
-													<li>Dolor pulvinar etiam magna etiam.</li>
-													<li>Sagittis adipiscing lorem eleifend.</li>
-													<li>Felis enim feugiat dolore viverra.</li>
-												</ul>
-											</div>
-											<div class="col-6 col-12-xsmall">
-												<h5>Ordered</h5>
-												<ol>
-													<li>Dolor pulvinar etiam magna etiam.</li>
-													<li>Etiam vel felis at lorem sed viverra.</li>
-													<li>Felis enim feugiat dolore viverra.</li>
-													<li>Dolor pulvinar etiam magna etiam.</li>
-													<li>Etiam vel felis at lorem sed viverra.</li>
-													<li>Felis enim feugiat dolore viverra.</li>
-												</ol>
-												<h5>Icons</h5>
-												<ul class="icons">
-													<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-													<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-													<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-													<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
-													<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
-													<li><a href="#" class="icon brands fa-tumblr"><span class="label">Tumblr</span></a></li>
-												</ul>
-											</div>
-										</div>
-										<h5>Actions</h5>
-										<ul class="actions">
-											<li><a href="#" class="button primary">Default</a></li>
-											<li><a href="#" class="button">Default</a></li>
-											<li><a href="#" class="button alt">Default</a></li>
-										</ul>
-										<ul class="actions small">
-											<li><a href="#" class="button primary small">Small</a></li>
-											<li><a href="#" class="button small">Small</a></li>
-											<li><a href="#" class="button alt small">Small</a></li>
-										</ul>
-										<div class="row">
-											<div class="col-3 col-6-medium col-12-xsmall">
-												<ul class="actions stacked">
-													<li><a href="#" class="button primary">Default</a></li>
-													<li><a href="#" class="button">Default</a></li>
-													<li><a href="#" class="button alt">Default</a></li>
-												</ul>
-											</div>
-											<div class="col-3 col-6 col-12-xsmall">
-												<ul class="actions stacked">
-													<li><a href="#" class="button primary small">Small</a></li>
-													<li><a href="#" class="button small">Small</a></li>
-													<li><a href="#" class="button alt small">Small</a></li>
-												</ul>
-											</div>
-											<div class="col-3 col-6-medium col-12-xsmall">
-												<ul class="actions stacked">
-													<li><a href="#" class="button primary fit">Default</a></li>
-													<li><a href="#" class="button fit">Default</a></li>
-													<li><a href="#" class="button alt fit">Default</a></li>
-												</ul>
-											</div>
-											<div class="col-3 col-6-medium col-12-xsmall">
-												<ul class="actions stacked">
-													<li><a href="#" class="button primary small fit">Small</a></li>
-													<li><a href="#" class="button small fit">Small</a></li>
-													<li><a href="#" class="button alt small fit">Small</a></li>
-												</ul>
-											</div>
-										</div>
-									</section>
+      <!-- Babel (live) -->
+      <article class="stage live" data-stage>
+        <div class="stage-year">2025 — now</div>
+        <div class="node"></div>
+        <div class="card" data-tilt>
+          <div class="card-top">
+            <div class="co"><a href="https://babelgroup.com/en/" target="_blank" rel="noopener" data-cursor>Ba<em>bel</em></a></div>
+            <span class="badge live">● Current position</span>
+          </div>
+          <div class="role">Senior Software Engineer<span class="dot">/</span><span class="rdate">Mar 2025 — Present</span><span class="dot">/</span><span class="rloc">Lisbon</span></div>
 
-									<section>
-										<h4>Table</h4>
-										<h5>Default</h5>
-										<div class="table-wrapper">
-											<table>
-												<thead>
-													<tr>
-														<th>Name</th>
-														<th>Description</th>
-														<th>Price</th>
-													</tr>
-												</thead>
-												<tbody>
-													<tr>
-														<td>Item One</td>
-														<td>Ante turpis integer aliquet porttitor.</td>
-														<td>29.99</td>
-													</tr>
-													<tr>
-														<td>Item Two</td>
-														<td>Vis ac commodo adipiscing arcu aliquet.</td>
-														<td>19.99</td>
-													</tr>
-													<tr>
-														<td>Item Three</td>
-														<td> Morbi faucibus arcu accumsan lorem.</td>
-														<td>29.99</td>
-													</tr>
-													<tr>
-														<td>Item Four</td>
-														<td>Vitae integer tempus condimentum.</td>
-														<td>19.99</td>
-													</tr>
-													<tr>
-														<td>Item Five</td>
-														<td>Ante turpis integer aliquet porttitor.</td>
-														<td>29.99</td>
-													</tr>
-												</tbody>
-												<tfoot>
-													<tr>
-														<td colspan="2"></td>
-														<td>100.00</td>
-													</tr>
-												</tfoot>
-											</table>
-										</div>
+          <div class="proj">
+            <div class="proj-h">
+              <span class="pname">IRN (Instituto dos Registos e do Notariado)</span>
+              <span class="pdate">Mar 2025 — May 2026</span>
+            </div>
+            <ul>
+              <li>Built &amp; maintained <b>dozens of .NET APIs</b> in a large-scale, event-driven microservices architecture.</li>
+              <li>Owned resilient <b>Kafka background jobs</b> — retry strategies, retry topics and dead-letter queues.</li>
+              <li>Designed and optimized production database queries for performance, scalability and reliability.</li>
+              <li>Authored shared <b>NuGet packages</b>, including common libraries and a resilient Redis access layer.</li>
+              <li>Built <b>React components and forms</b> that integrate with the platform's APIs.</li>
+              <li>Acted as <b>backend tech lead</b> and stepped into cross-team <b>architecture</b> decisions.</li>
+            </ul>
+            <div class="chips"><span>.NET 8</span><span>React</span><span>Kafka</span><span>Redis</span><span>NuGet</span><span>Microservices</span></div>
+          </div>
 
-										<h5>Alternate</h5>
-										<div class="table-wrapper">
-											<table class="alt">
-												<thead>
-													<tr>
-														<th>Name</th>
-														<th>Description</th>
-														<th>Price</th>
-													</tr>
-												</thead>
-												<tbody>
-													<tr>
-														<td>Item One</td>
-														<td>Ante turpis integer aliquet porttitor.</td>
-														<td>29.99</td>
-													</tr>
-													<tr>
-														<td>Item Two</td>
-														<td>Vis ac commodo adipiscing arcu aliquet.</td>
-														<td>19.99</td>
-													</tr>
-													<tr>
-														<td>Item Three</td>
-														<td> Morbi faucibus arcu accumsan lorem.</td>
-														<td>29.99</td>
-													</tr>
-													<tr>
-														<td>Item Four</td>
-														<td>Vitae integer tempus condimentum.</td>
-														<td>19.99</td>
-													</tr>
-													<tr>
-														<td>Item Five</td>
-														<td>Ante turpis integer aliquet porttitor.</td>
-														<td>29.99</td>
-													</tr>
-												</tbody>
-												<tfoot>
-													<tr>
-														<td colspan="2"></td>
-														<td>100.00</td>
-													</tr>
-												</tfoot>
-											</table>
-										</div>
-									</section>
+          <div class="proj live">
+            <div class="proj-h">
+              <span class="pname">GRA (Governo Regional dos Açores)</span>
+              <span class="pdate">May 2026 — Present</span>
+            </div>
+            <ul>
+              <li>Act as <b>solution architect &amp; tech lead</b>, hands-on across backend and frontend.</li>
+              <li>Defined the full stack — <b>.NET 10, React, PostgreSQL</b> — and designed the solution on client-provisioned VMs.</li>
+              <li>Built a <b>high-availability</b> database layer: 2 PostgreSQL nodes across 3 VMs, with <b>etcd + Patroni</b> replicating data automatically and handling failover.</li>
+            </ul>
+            <div class="chips"><span>.NET 10</span><span>React</span><span>PostgreSQL</span><span>Patroni</span><span>etcd</span><span>High Availability</span></div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
 
-									<section>
-										<h4>Buttons</h4>
-										<ul class="actions">
-											<li><a href="#" class="button primary">Primary</a></li>
-											<li><a href="#" class="button">Default</a></li>
-											<li><a href="#" class="button alt">Alternate</a></li>
-										</ul>
-										<ul class="actions">
-											<li><a href="#" class="button primary large">Large</a></li>
-											<li><a href="#" class="button">Default</a></li>
-											<li><a href="#" class="button alt small">Small</a></li>
-										</ul>
-										<ul class="actions fit">
-											<li><a href="#" class="button primary fit">Fit</a></li>
-											<li><a href="#" class="button fit">Fit</a></li>
-											<li><a href="#" class="button alt fit">Fit</a></li>
-										</ul>
-										<ul class="actions fit small">
-											<li><a href="#" class="button primary fit small">Fit + Small</a></li>
-											<li><a href="#" class="button fit small">Fit + Small</a></li>
-											<li><a href="#" class="button alt fit small">Fit + Small</a></li>
-										</ul>
-										<ul class="actions">
-											<li><a href="#" class="button primary icon solid fa-download">Icon</a></li>
-											<li><a href="#" class="button icon solid fa-download">Icon</a></li>
-											<li><a href="#" class="button alt icon solid fa-check">Icon</a></li>
-										</ul>
-										<ul class="actions">
-											<li><span class="button primary disabled">Primary</span></li>
-											<li><span class="button disabled">Default</span></li>
-											<li><span class="button alt disabled">Alternate</span></li>
-										</ul>
-									</section>
+<!-- ============ STAT SHOWCASE ============ -->
+<section class="sec stat">
+  <div class="wrap">
+    <div class="show r" id="show">
+      <div class="show-slides">
 
-									<section>
-										<h4>Form</h4>
-										<form method="post" action="#">
-											<div class="row gtr-uniform">
-												<div class="col-6 col-12-xsmall">
-													<input type="text" name="demo-name" id="demo-name" value="" placeholder="Name" />
-												</div>
-												<div class="col-6 col-12-xsmall">
-													<input type="email" name="demo-email" id="demo-email" value="" placeholder="Email" />
-												</div>
-												<div class="col-12">
-													<select name="demo-category" id="demo-category">
-														<option value="">- Category -</option>
-														<option value="1">Manufacturing</option>
-														<option value="1">Shipping</option>
-														<option value="1">Administration</option>
-														<option value="1">Human Resources</option>
-													</select>
-												</div>
-												<div class="col-4 col-12-medium">
-													<input type="radio" id="demo-priority-low" name="demo-priority" checked>
-													<label for="demo-priority-low">Low Priority</label>
-												</div>
-												<div class="col-4 col-12-medium">
-													<input type="radio" id="demo-priority-normal" name="demo-priority">
-													<label for="demo-priority-normal">Normal Priority</label>
-												</div>
-												<div class="col-4 col-12-medium">
-													<input type="radio" id="demo-priority-high" name="demo-priority">
-													<label for="demo-priority-high">High Priority</label>
-												</div>
-												<div class="col-6 col-12-medium">
-													<input type="checkbox" id="demo-copy" name="demo-copy">
-													<label for="demo-copy">Email me a copy of this message</label>
-												</div>
-												<div class="col-6 col-12-medium">
-													<input type="checkbox" id="demo-human" name="demo-human" checked>
-													<label for="demo-human">I am a human and not a robot</label>
-												</div>
-												<div class="col-12">
-													<textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
-												</div>
-												<div class="col-12">
-													<ul class="actions">
-														<li><input type="submit" value="Send Message" /></li>
-														<li><input type="reset" value="Reset" class="alt" /></li>
-													</ul>
-												</div>
-											</div>
-										</form>
-									</section>
+        <div class="stat-grid show-slide is-on">
+          <div class="stat-lead">
+            <span class="eyebrow">signature optimization</span>
+            <h3>One endpoint.<br>53× faster.</h3>
+            <p>A critical .NET endpoint aggregating data across multiple tables — re-architected to collapse a 16-second wait into a fraction of a second for thousands of records.</p>
+          </div>
+          <div class="gauge">
+            <div class="gauge-row">
+              <div class="lab"><span>BEFORE — response time</span><span class="num"><span data-count="16.0" data-suffix="s" data-dec="1">0.0</span></span></div>
+              <div class="bar before"><i data-w="100"></i></div>
+            </div>
+            <div class="gauge-row">
+              <div class="lab"><span>AFTER — re-architected</span><span class="num"><span data-count="0.3" data-suffix="s" data-dec="1">0.0</span></span></div>
+              <div class="bar after"><i data-w="1.9"></i></div>
+            </div>
+            <div class="verdict"><b><span data-count="53" data-suffix="×">0</span></b> faster · ~98% latency removed</div>
+          </div>
+        </div>
 
-									<section>
-										<h4>Image</h4>
-										<h5>Fit</h5>
-										<span class="image fit"><img src="images/banner.jpg" alt="" /></span>
-										<div class="box alt">
-											<div class="row gtr-50 gtr-uniform">
-												<div class="col-4"><span class="image fit"><img src="images/pic01.jpg" alt="" /></span></div>
-												<div class="col-4"><span class="image fit"><img src="images/pic02.jpg" alt="" /></span></div>
-												<div class="col-4"><span class="image fit"><img src="images/pic03.jpg" alt="" /></span></div>
-												<div class="col-4"><span class="image fit"><img src="images/pic02.jpg" alt="" /></span></div>
-												<div class="col-4"><span class="image fit"><img src="images/pic03.jpg" alt="" /></span></div>
-												<div class="col-4"><span class="image fit"><img src="images/pic01.jpg" alt="" /></span></div>
-												<div class="col-4"><span class="image fit"><img src="images/pic03.jpg" alt="" /></span></div>
-												<div class="col-4"><span class="image fit"><img src="images/pic01.jpg" alt="" /></span></div>
-												<div class="col-4"><span class="image fit"><img src="images/pic02.jpg" alt="" /></span></div>
-											</div>
-										</div>
-										<h5>Left &amp; Right</h5>
-										<p><span class="image left"><img src="images/avatar.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.</p>
-										<p><span class="image right"><img src="images/avatar.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.</p>
-									</section>
+        <div class="stat-grid show-slide">
+          <div class="stat-lead">
+            <span class="eyebrow">signature refactor</span>
+            <h3>One table.<br>60% less code.</h3>
+            <p>A planning table streaming thousands of hourly records — dozens of interactions, in-place edits, saved versions. Rewritten from ~5,000 lines down to ~2,000 while backend queries got 5× faster and editing went from laggy to smooth.</p>
+          </div>
+          <div class="gauge">
+            <div class="gauge-row">
+              <div class="lab"><span>BEFORE — frontend code</span><span class="num"><span data-count="5.0" data-suffix="k lines" data-dec="1">0.0</span></span></div>
+              <div class="bar before"><i data-w="100"></i></div>
+            </div>
+            <div class="gauge-row">
+              <div class="lab"><span>AFTER — refactored</span><span class="num"><span data-count="2.0" data-suffix="k lines" data-dec="1">0.0</span></span></div>
+              <div class="bar after"><i data-w="40"></i></div>
+            </div>
+            <div class="verdict"><b><span data-count="5" data-suffix="×">0</span></b> faster backend · zero lag on the frontend</div>
+          </div>
+        </div>
 
-								</div>
-							</section>
-						-->
+      </div>
+      <div class="show-nav">
+        <button class="show-dot active" type="button" aria-label="Show optimization 1"></button>
+        <button class="show-dot" type="button" aria-label="Show optimization 2"></button>
+      </div>
+    </div>
+  </div>
+</section>
 
-					</div>
+<!-- ============ SKILLS ============ -->
+<section class="sec" id="skills">
+  <div class="wrap">
+    <div class="sec-head r">
+      <h2>The stack.</h2>
+      <span class="idx">[ 03 — capabilities ]</span>
+    </div>
+    <div class="stacks">
+      <div class="stack r" data-tilt>
+        <div class="stack-h"><span class="n">be</span><h4>Backend</h4></div>
+        <ul><li>C#</li><li>.NET Core / 6+</li><li>ASP.NET Core</li><li>Microservices</li><li>Monolithic</li><li>Event-Driven</li><li>Kafka</li></ul>
+      </div>
+      <div class="stack r" data-tilt>
+        <div class="stack-h"><span class="n">db</span><h4>Data</h4></div>
+        <ul><li>PostgreSQL</li><li>OracleDB</li><li>SQL Server</li><li>MySQL</li><li>Redis</li><li>Patroni</li><li>etcd</li></ul>
+      </div>
+      <div class="stack r" data-tilt>
+        <div class="stack-h"><span class="n">fe</span><h4>Frontend</h4></div>
+        <ul><li>JavaScript</li><li>TypeScript</li><li>React</li><li>HTML5</li><li>CSS</li><li>jQuery</li></ul>
+      </div>
+      <div class="stack r" data-tilt>
+        <div class="stack-h"><span class="n">ops</span><h4>DevOps &amp; Craft</h4></div>
+        <ul><li>Docker</li><li>Docker Compose</li><li>CI/CD</li><li>GitHub Actions</li><li>High Availability</li><li>Git</li><li>Agile / Scrum</li><li>Unity</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
 
-				<!-- Footer -->
-					<section id="footer">
-						<div class="container">
-							<ul class="copyright">
-								<li>&copy; Rui Martins. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a> customized by Rui Martins</li>
-							</ul>
-						</div>
-					</section>
+<!-- ============ CODA ============ -->
+<section class="sec" style="padding-top:0">
+  <div class="wrap">
+    <div class="coda-grid">
+      <div class="coda r">
+        <h4>Education</h4>
+        <div class="row"><div class="t">BSc Game Development</div><div class="m">Universidade Lusófona · 2017–2020</div></div>
+        <div class="row"><div class="t">Programming</div><div class="m">ESSJT, São João da Talha · 2011–2013</div></div>
+      </div>
+      <div class="coda r">
+        <h4>Certifications</h4>
+        <div class="row"><div class="t">Azure Fundamentals</div><div class="m">Microsoft · AZ-900</div></div>
+      </div>
+      <div class="coda r">
+        <h4>Languages</h4>
+        <div class="row"><div class="t">Portuguese <span class="m" style="display:inline">C2</span></div><div class="lang-bar"><i style="width:100%"></i></div></div>
+        <div class="row"><div class="t">English <span class="m" style="display:inline">C1</span></div><div class="lang-bar"><i style="width:83.3%"></i></div></div>
+        <div class="row"><div class="t">Spanish <span class="m" style="display:inline">A2</span></div><div class="lang-bar"><i style="width:33.3%"></i></div></div>
+      </div>
+    </div>
+  </div>
+</section>
 
-			</div>
+<!-- ============ CONTACT ============ -->
+<section class="contact" id="contact">
+  <div class="wrap">
+    <span class="eyebrow r">got a challenge for me?</span>
+    <br>
+    <a class="mail r" href="mailto:rui.mart95@gmail.com" data-cursor>rui.mart95@gmail.com</a>
+    <div class="links r">
+      <a href="https://www.linkedin.com/in/theruimartins" target="_blank" rel="noopener" data-cursor>LinkedIn <span class="ar">↗</span></a>
+      <a href="https://rui-martins.github.io" target="_blank" rel="noopener" data-cursor>GitHub <span class="ar">↗</span></a>
+      <a href="mailto:rui.mart95@gmail.com" data-cursor>Email <span class="ar">↗</span></a>
+      <a href="RuiMartins_CV.pdf" download class="cv" data-cursor>CV <span class="ar">↓</span></a>
+    </div>
+  </div>
+</section>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+<footer>
+  <div class="wrap">
+    <span>Built by Rui Martins</span>
+    <span>Lisbon, Portugal — © <span id="yr">2026</span></span>
+  </div>
+</footer>
 
-	</body>
+<script src="script.js"></script>
+</body>
 </html>
