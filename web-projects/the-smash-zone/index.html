@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Smash Zone — Smash Burgers · Parque das Nações, Lisboa</title>
+<meta name="description" content="Smash burgers 100% Angus em pão de batata-doce, esmagados na chapa sem atalhos. Kalorias Expo, Parque das Nações, Lisboa.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:ital,wght@0,400;0,500;0,700;1,400&family=Yellowtail&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%230b0b0b'/><text x='50' y='68' font-size='52' text-anchor='middle' font-family='Arial Black' fill='%23ffd60a'>SZ</text></svg>">
+<style>
+:root{
+  --black:#0b0b0b;
+  --black-soft:#141412;
+  --card:#171714;
+  --yellow:#ffd60a;
+  --yellow-deep:#ffb703;
+  --neon:#fff04d;
+  --bone:#f3eee2;
+  --muted:#9a958a;
+  --line:rgba(255,214,10,.18);
+  --font-display:'Anton',sans-serif;
+  --font-body:'Archivo',sans-serif;
+  --font-neon:'Yellowtail',cursive;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  background:var(--black);
+  color:var(--bone);
+  font-family:var(--font-body);
+  font-size:17px;
+  line-height:1.6;
+  overflow-x:hidden;
+}
+::selection{background:var(--yellow);color:var(--black)}
+
+/* ---------- grain + glow atmosphere ---------- */
+body::before{
+  content:"";position:fixed;inset:0;z-index:999;pointer-events:none;opacity:.07;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+}
+.glow-field{position:fixed;inset:0;z-index:0;pointer-events:none}
+.glow-field span{position:absolute;border-radius:50%;filter:blur(120px);opacity:.14}
+.glow-field span:nth-child(1){width:46vw;height:46vw;background:var(--yellow);top:-18vw;right:-12vw}
+.glow-field span:nth-child(2){width:34vw;height:34vw;background:#ff7b00;bottom:-14vw;left:-10vw;opacity:.08}
+
+main,header,footer{position:relative;z-index:1}
+
+/* ---------- header ---------- */
+header{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:14px clamp(18px,4vw,48px);
+  background:rgba(11,11,11,.78);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--line);
+}
+.brand{display:flex;align-items:baseline;gap:10px;text-decoration:none}
+.brand b{font-family:var(--font-display);font-size:1.35rem;letter-spacing:.04em;color:var(--bone);font-weight:400}
+.brand b em{font-style:normal;color:var(--yellow)}
+.brand span{font-family:var(--font-neon);color:var(--yellow);font-size:1rem;transform:rotate(-4deg);display:inline-block}
+nav{display:flex;gap:clamp(14px,2.4vw,32px);align-items:center}
+nav a{color:var(--bone);text-decoration:none;font-size:.82rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;position:relative;padding:4px 0}
+nav a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:2px;background:var(--yellow);transition:width .25s}
+nav a:hover::after{width:100%}
+.lang-toggle{
+  display:flex;border:1.5px solid var(--yellow);border-radius:999px;overflow:hidden;cursor:pointer;
+}
+.lang-toggle button{
+  background:none;border:0;color:var(--yellow);font-family:var(--font-body);font-weight:700;
+  font-size:.74rem;letter-spacing:.1em;padding:6px 12px;cursor:pointer;transition:.2s;
+}
+.lang-toggle button.active{background:var(--yellow);color:var(--black)}
+.nav-links{display:flex;gap:clamp(14px,2.4vw,32px)}
+@media(max-width:760px){.nav-links{display:none}}
+
+/* ---------- hero ---------- */
+.hero{
+  min-height:100svh;display:flex;flex-direction:column;justify-content:center;
+  padding:120px clamp(18px,5vw,64px) 0;position:relative;
+}
+.hero-kicker{
+  font-family:var(--font-neon);font-size:clamp(1.6rem,3.4vw,2.6rem);color:var(--neon);
+  transform:rotate(-3deg);margin-bottom:-1vw;margin-left:.5vw;
+  text-shadow:0 0 12px rgba(255,240,77,.8),0 0 42px rgba(255,214,10,.45);
+  animation:flicker 6s infinite;
+}
+@keyframes flicker{
+  0%,100%{opacity:1}
+  3%{opacity:.4}4%{opacity:1}
+  52%{opacity:1}53%{opacity:.55}54%{opacity:1}55%{opacity:.7}56%{opacity:1}
+}
+.hero h1{
+  font-family:var(--font-display);font-weight:400;
+  font-size:clamp(4.2rem,15.5vw,15rem);
+  line-height:.88;letter-spacing:.01em;text-transform:uppercase;color:var(--bone);
+}
+.hero h1 .row{display:block}
+.hero h1 .outline{
+  color:transparent;-webkit-text-stroke:2px var(--yellow);
+}
+.hero h1 .solid{color:var(--yellow)}
+.hero-sub{
+  display:flex;flex-wrap:wrap;gap:18px;align-items:center;
+  margin-top:clamp(22px,4vh,44px);max-width:680px;
+}
+.hero-sub p{color:var(--muted);font-size:clamp(.95rem,1.4vw,1.1rem);max-width:46ch}
+.btn{
+  display:inline-block;font-weight:700;text-transform:uppercase;letter-spacing:.12em;font-size:.85rem;
+  padding:15px 30px;border-radius:999px;text-decoration:none;transition:transform .2s,box-shadow .2s;
+}
+.btn-yellow{background:var(--yellow);color:var(--black);box-shadow:0 0 0 rgba(255,214,10,0)}
+.btn-yellow:hover{transform:translateY(-2px) rotate(-1deg);box-shadow:0 8px 34px rgba(255,214,10,.35)}
+.btn-ghost{border:1.5px solid var(--bone);color:var(--bone)}
+.btn-ghost:hover{border-color:var(--yellow);color:var(--yellow);transform:translateY(-2px)}
+.hero-badge{
+  position:absolute;right:clamp(14px,7vw,120px);top:clamp(110px,16vh,180px);
+  width:clamp(110px,13vw,170px);height:clamp(110px,13vw,170px);
+  animation:spin 22s linear infinite;opacity:.95;
+}
+@keyframes spin{to{transform:rotate(360deg)}}
+@media(max-width:640px){.hero-badge{display:none}}
+
+/* ---------- marquee ---------- */
+.marquee{
+  background:var(--yellow);color:var(--black);overflow:hidden;white-space:nowrap;
+  transform:rotate(-1.2deg) scale(1.02);border-top:3px solid var(--black);border-bottom:3px solid var(--black);
+  padding:12px 0;margin:6vh 0;position:relative;z-index:2;
+}
+.marquee .track{display:inline-block;animation:scroll 28s linear infinite}
+.marquee span{
+  font-family:var(--font-display);font-size:clamp(1.1rem,2.2vw,1.7rem);
+  text-transform:uppercase;letter-spacing:.06em;padding:0 22px;
+}
+@keyframes scroll{to{transform:translateX(-50%)}}
+
+/* ---------- sections ---------- */
+section{padding:clamp(64px,11vh,130px) clamp(18px,5vw,64px);max-width:1280px;margin:0 auto}
+.sec-head{margin-bottom:clamp(34px,6vh,64px)}
+.sec-head .script{
+  font-family:var(--font-neon);color:var(--neon);font-size:clamp(1.4rem,2.6vw,2rem);
+  transform:rotate(-2deg);display:inline-block;
+  text-shadow:0 0 10px rgba(255,240,77,.7),0 0 34px rgba(255,214,10,.4);
+}
+.sec-head h2{
+  font-family:var(--font-display);font-weight:400;text-transform:uppercase;
+  font-size:clamp(2.6rem,6.5vw,5rem);line-height:.95;color:var(--bone);
+}
+.sec-head h2 mark{background:none;color:var(--yellow)}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(34px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+
+/* ---------- menu ---------- */
+.menu-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:22px}
+.menu-card{
+  background:var(--card);border:1px solid var(--line);border-radius:18px;
+  padding:30px 26px;position:relative;overflow:hidden;
+  transition:transform .25s,border-color .25s;
+}
+.menu-card:hover{transform:translateY(-6px) rotate(-.4deg);border-color:var(--yellow)}
+.menu-card.feature{
+  background:var(--yellow);color:var(--black);border:3px solid var(--black);
+  box-shadow:8px 8px 0 var(--yellow-deep);
+}
+.menu-card h3{font-family:var(--font-display);font-weight:400;text-transform:uppercase;font-size:1.7rem;letter-spacing:.02em;margin-bottom:6px}
+.menu-card .desc{font-size:.92rem;opacity:.82;margin-bottom:20px}
+.menu-card.feature .desc{opacity:.78}
+.price-row{display:flex;justify-content:space-between;align-items:baseline;padding:9px 0;border-top:1px dashed rgba(255,255,255,.16)}
+.menu-card.feature .price-row{border-top:1px dashed rgba(0,0,0,.28)}
+.price-row .item{font-weight:500}
+.price-row .pts{flex:1}
+.price-row .price{font-family:var(--font-display);font-size:1.25rem;color:var(--yellow)}
+.menu-card.feature .price-row .price{color:var(--black)}
+.tag{
+  position:absolute;top:18px;right:-38px;transform:rotate(35deg);
+  background:var(--black);color:var(--yellow);font-size:.68rem;font-weight:700;
+  letter-spacing:.14em;text-transform:uppercase;padding:6px 44px;
+}
+.menu-note{margin-top:26px;color:var(--muted);font-size:.92rem;max-width:64ch}
+.menu-note b{color:var(--yellow)}
+
+/* ---------- story ---------- */
+.story{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(28px,5vw,72px);align-items:center}
+@media(max-width:880px){.story{grid-template-columns:1fr}}
+.story-text p{margin-bottom:18px;color:#cfc9bb}
+.story-text p strong{color:var(--bone)}
+.pullquote{
+  border-left:4px solid var(--yellow);padding:6px 0 6px 22px;margin:26px 0;
+  font-size:clamp(1.15rem,2vw,1.45rem);font-style:italic;color:var(--bone);line-height:1.45;
+}
+.pullquote cite{display:block;font-style:normal;font-size:.85rem;color:var(--muted);margin-top:10px;text-transform:uppercase;letter-spacing:.12em}
+.story-visual{position:relative;min-height:380px}
+.polaroid{
+  position:absolute;background:var(--card);border:1px solid var(--line);border-radius:14px;
+  padding:18px;width:min(78%,330px);transition:transform .3s;
+}
+.polaroid:hover{transform:scale(1.03) rotate(0deg)!important;z-index:5}
+.polaroid .ph{
+  aspect-ratio:4/3;border-radius:8px;display:flex;align-items:center;justify-content:center;
+  font-family:var(--font-display);text-transform:uppercase;letter-spacing:.05em;text-align:center;
+  font-size:1.1rem;line-height:1.2;padding:14px;
+}
+.polaroid .cap{font-family:var(--font-neon);color:var(--yellow);font-size:1.15rem;margin-top:12px;transform:rotate(-2deg)}
+.p1{top:0;left:0;transform:rotate(-4deg)}
+.p1 .ph{background:linear-gradient(140deg,#2a2410,#0e0d08);color:var(--yellow)}
+.p2{bottom:0;right:0;transform:rotate(3deg)}
+.p2 .ph{background:linear-gradient(140deg,#1c1c18,#000);color:var(--bone)}
+.stats{display:flex;gap:14px;flex-wrap:wrap;margin-top:30px}
+.stat{
+  border:1.5px solid var(--line);border-radius:14px;padding:16px 22px;min-width:130px;
+}
+.stat b{font-family:var(--font-display);font-weight:400;font-size:2rem;color:var(--yellow);display:block;line-height:1}
+.stat span{font-size:.78rem;text-transform:uppercase;letter-spacing:.12em;color:var(--muted)}
+
+/* ---------- expansion ---------- */
+.expansion-strip{
+  background:var(--black-soft);border:1px solid var(--line);border-radius:22px;
+  padding:clamp(30px,5vw,56px);display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:30px;
+}
+.exp-item .num{font-family:var(--font-neon);color:var(--neon);font-size:1.5rem;text-shadow:0 0 12px rgba(255,240,77,.6)}
+.exp-item h3{font-family:var(--font-display);font-weight:400;text-transform:uppercase;font-size:1.4rem;margin:8px 0 8px;color:var(--bone)}
+.exp-item p{font-size:.92rem;color:var(--muted)}
+
+/* ---------- instagram ---------- */
+.insta{
+  text-align:center;background:var(--yellow);color:var(--black);max-width:none;
+  transform:rotate(-1deg) scale(1.01);border-top:3px solid var(--black);border-bottom:3px solid var(--black);
+  padding:clamp(60px,10vh,110px) 24px;
+}
+.insta .script{font-family:var(--font-neon);font-size:clamp(1.5rem,3vw,2.3rem);display:block;transform:rotate(-2deg)}
+.insta h2{font-family:var(--font-display);font-weight:400;text-transform:uppercase;font-size:clamp(2.4rem,7vw,5.5rem);line-height:.95;margin:10px 0 26px}
+.insta .btn{background:var(--black);color:var(--yellow)}
+.insta .btn:hover{box-shadow:0 8px 30px rgba(0,0,0,.35)}
+
+/* ---------- location ---------- */
+.loc{display:grid;grid-template-columns:1fr 1fr;gap:clamp(26px,4vw,56px);align-items:stretch}
+@media(max-width:880px){.loc{grid-template-columns:1fr}}
+.city-title{
+  font-family:var(--font-display);font-weight:400;text-transform:uppercase;
+  font-size:clamp(1.5rem,3vw,2.2rem);color:var(--bone);margin:clamp(40px,7vh,70px) 0 22px;
+  display:flex;align-items:center;gap:16px;
+}
+.city-title:first-of-type{margin-top:0}
+.city-title::after{content:"";flex:1;height:1px;background:var(--line)}
+.city-title .pin{font-family:var(--font-neon);font-size:1.2rem;color:var(--neon);text-shadow:0 0 10px rgba(255,240,77,.6);transform:rotate(-2deg)}
+.loc-map{border-radius:22px;overflow:hidden;border:1px solid var(--line);min-height:380px;filter:grayscale(.4) contrast(1.05)}
+.loc-map iframe{width:100%;height:100%;min-height:380px;border:0;display:block}
+.loc-info{display:flex;flex-direction:column;gap:22px;justify-content:center}
+.info-block{border:1px solid var(--line);border-radius:18px;padding:24px 26px;background:var(--card)}
+.info-block h3{
+  font-family:var(--font-display);font-weight:400;text-transform:uppercase;font-size:1.15rem;
+  letter-spacing:.06em;color:var(--yellow);margin-bottom:12px;
+}
+.info-block p,.info-block a{color:var(--bone);text-decoration:none}
+.info-block a:hover{color:var(--yellow)}
+.hours-row{display:flex;justify-content:space-between;gap:14px;padding:8px 0;border-bottom:1px dashed rgba(255,255,255,.12);font-size:.95rem}
+.hours-row:last-child{border-bottom:0}
+.hours-row .d{color:var(--muted)}
+.hours-row .h{font-weight:700;text-align:right}
+.phone-big{font-family:var(--font-display);font-size:clamp(1.6rem,3vw,2.2rem);letter-spacing:.04em}
+
+/* ---------- footer ---------- */
+footer{
+  border-top:1px solid var(--line);padding:38px clamp(18px,5vw,64px);
+  display:flex;flex-wrap:wrap;gap:18px;justify-content:space-between;align-items:center;
+}
+footer .brand b{font-size:1.1rem}
+footer p{font-size:.8rem;color:var(--muted)}
+footer .social a{color:var(--bone);text-decoration:none;font-weight:700;font-size:.85rem;letter-spacing:.1em;text-transform:uppercase}
+footer .social a:hover{color:var(--yellow)}
+</style>
+</head>
+<body>
+
+<div class="glow-field" aria-hidden="true"><span></span><span></span></div>
+
+<header>
+  <a class="brand" href="#top">
+    <b>THE <em>SMASH</em> ZONE</b><span data-i18n="brand_tag">lisboa</span>
+  </a>
+  <nav>
+    <div class="nav-links">
+      <a href="#menu" data-i18n="nav_menu">Menu</a>
+      <a href="#historia" data-i18n="nav_story">História</a>
+      <a href="#local" data-i18n="nav_find">Onde Estamos</a>
+    </div>
+    <div class="lang-toggle" role="group" aria-label="Idioma / Language">
+      <button id="btn-pt" class="active" onclick="setLang('pt')">PT</button>
+      <button id="btn-en" onclick="setLang('en')">EN</button>
+    </div>
+  </nav>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero" style="max-width:none">
+    <span class="hero-kicker" data-i18n="hero_kicker">esmagados na chapa, sem atalhos</span>
+    <h1>
+      <span class="row outline">THE</span>
+      <span class="row solid">SMASH</span>
+      <span class="row outline">ZONE</span>
+    </h1>
+    <svg class="hero-badge" viewBox="0 0 200 200" aria-hidden="true">
+      <defs><path id="circ" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0"/></defs>
+      <circle cx="100" cy="100" r="98" fill="none" stroke="#ffd60a" stroke-width="2"/>
+      <circle cx="100" cy="100" r="52" fill="#ffd60a"/>
+      <text fill="#ffd60a" font-size="21" font-weight="700" letter-spacing="3" font-family="Archivo,sans-serif">
+        <textPath href="#circ" data-i18n="badge_text">100% ANGUS · PÃO DE BATATA-DOCE · </textPath>
+      </text>
+      <text x="100" y="112" text-anchor="middle" font-family="Anton,sans-serif" font-size="34" fill="#0b0b0b">SZ</text>
+    </svg>
+    <div class="hero-sub">
+      <p data-i18n="hero_sub">Smash burgers 100% Angus esmagados na chapa sem adição de gordura, servidos em pão de batata-doce. A indulgência saudável, no Parque das Nações e em Sines.</p>
+      <a class="btn btn-yellow" href="#menu" data-i18n="hero_cta1">Ver o Menu</a>
+      <a class="btn btn-ghost" href="tel:+351937422299" data-i18n="hero_cta2">Ligar · 937 422 299</a>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee" aria-hidden="true">
+    <div class="track" id="marquee-track"></div>
+  </div>
+
+  <!-- MENU -->
+  <section id="menu">
+    <div class="sec-head reveal">
+      <span class="script" data-i18n="menu_script">sem truques, sem atalhos</span>
+      <h2 data-i18n-html="menu_title">O <mark>Menu</mark></h2>
+    </div>
+    <div class="menu-grid">
+      <article class="menu-card feature reveal">
+        <div class="tag" data-i18n="tag_classic">O Clássico</div>
+        <h3>The Smash</h3>
+        <p class="desc" data-i18n="smash_desc">100% Angus esmagado na chapa, queijo Cheddar, picles de pepino, cebola crua, ketchup e mostarda, em pão de batata-doce.</p>
+        <div class="price-row"><span class="item">Single</span><span class="pts"></span><span class="price">6,5€</span></div>
+        <div class="price-row"><span class="item">Double</span><span class="pts"></span><span class="price">9,5€</span></div>
+        <div class="price-row"><span class="item">Triple</span><span class="pts"></span><span class="price">11,9€</span></div>
+        <div class="price-row"><span class="item">Mini <span data-i18n="mini_note">(metade do tamanho)</span></span><span class="pts"></span><span class="price">4€</span></div>
+      </article>
+
+      <article class="menu-card reveal">
+        <h3 data-i18n="menus_title">Menus</h3>
+        <p class="desc" data-i18n="menus_desc">Qualquer smash com batatas e bebida incluídas.</p>
+        <div class="price-row"><span class="item" data-i18n="menus_from">Menus desde</span><span class="pts"></span><span class="price">11,5€</span></div>
+        <div class="price-row"><span class="item" data-i18n="menu_family">Menu Família</span><span class="pts"></span><span class="price">32€</span></div>
+        <div class="price-row"><span class="item" data-i18n="menu_student">Menu Estudante · Sines</span><span class="pts"></span><span class="price">9,5€</span></div>
+        <p class="desc" style="margin-top:18px;margin-bottom:0" data-i18n="family_desc">Família: 1 smash duplo + 2 simples + 3 doses de batatas + 3 bebidas. Estudante: seg–qua, 12h–15h, com cartão de estudante.</p>
+      </article>
+
+      <article class="menu-card reveal">
+        <h3 data-i18n="allday_title">All Day</h3>
+        <p class="desc" data-i18n="allday_desc">Para o pequeno-almoço, lanche ou versões mais leves.</p>
+        <div class="price-row"><span class="item">Egg &amp; Cheese</span><span class="pts"></span><span class="price">3,9€</span></div>
+        <div class="price-row"><span class="item">Egg &amp; Cheese Bacon</span><span class="pts"></span><span class="price">5,2€</span></div>
+        <div class="price-row"><span class="item">Egg &amp; Cheese Burger</span><span class="pts"></span><span class="price">6,4€</span></div>
+        <div class="price-row"><span class="item" data-i18n="icecream">Gelado · baunilha, morango ou mix</span><span class="pts"></span><span class="price">2€</span></div>
+        <p class="desc" style="margin-top:18px;margin-bottom:0" data-i18n="egg_desc">Ovos mexidos ou estrelados com queijo Cheddar dentro do pão.</p>
+      </article>
+    </div>
+    <p class="menu-note reveal" data-i18n-html="menu_note"><b>Sabemos exatamente o que estamos a consumir:</b> carne 100% Angus esmagada na chapa sem adição de gordura, envolvida num pão de batata-doce.</p>
+  </section>
+
+  <!-- HISTÓRIA -->
+  <section id="historia">
+    <div class="sec-head reveal">
+      <span class="script" data-i18n="story_script">de uma ideia em casa…</span>
+      <h2 data-i18n-html="story_title">A Nossa <mark>História</mark></h2>
+    </div>
+    <div class="story">
+      <div class="story-text reveal">
+        <p data-i18n="story_p1">Tudo começou em casa, quando o Guilherme, filho mais velho de Maria João Salgado, decidiu que queria abrir um restaurante — numa altura em que a febre dos smash burgers ainda não tinha tomado conta de Lisboa.</p>
+        <p data-i18n="story_p2">Dois anos depois, o projeto ganhou forma no espaço Kalorias, no Parque das Nações, do qual Maria João é sócia fundadora. Foi o Guilherme quem lançou a semente e definiu o produto: o tipo de carne, o pão e as combinações. Um hambúrguer que pudesse ser uma indulgência saudável.</p>
+        <p data-i18n="story_p3">Hoje, Maria João e Miguel Vaz levam o conceito mais longe: carne Angus maturada durante 14 dias, frita na sua própria gordura — a reação de Maillard carameliza a carne e dá-lhe um paladar fora do normal. Em abril de 2026 chegaram a Sines, a terra natal de ambos.</p>
+        <blockquote class="pullquote">
+          <span data-i18n="quote_text">“Não há truques, não há atalhos. Aqui sabemos exatamente o que estamos a consumir.”</span>
+          <cite>— Maria João Salgado</cite>
+        </blockquote>
+        <div class="stats">
+          <div class="stat"><b>100%</b><span data-i18n="stat_angus">Carne Angus</span></div>
+          <div class="stat"><b>14</b><span data-i18n="stat_aged">Dias de maturação</span></div>
+          <div class="stat"><b>0</b><span data-i18n="stat_fat">Gordura adicionada</span></div>
+        </div>
+      </div>
+      <div class="story-visual reveal" aria-hidden="true">
+        <div class="polaroid p1">
+          <div class="ph" data-i18n="pol1">Smash na chapa · 100% Angus</div>
+          <div class="cap" data-i18n="pol1_cap">o original</div>
+        </div>
+        <div class="polaroid p2">
+          <div class="ph" data-i18n="pol2">Pretos, amarelos &amp; muitos néons</div>
+          <div class="cap" data-i18n="pol2_cap">o nosso espaço</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPANSÃO -->
+  <section id="expansao">
+    <div class="sec-head reveal">
+      <span class="script" data-i18n="exp_script">a zona está a crescer</span>
+      <h2 data-i18n-html="exp_title">Próximas <mark>Paragens</mark></h2>
+    </div>
+    <div class="expansion-strip reveal">
+      <div class="exp-item">
+        <span class="num">01</span>
+        <h3 data-i18n="exp1_t">Cais do Sodré</h3>
+        <p data-i18n="exp1_p">Está em preparação uma nova loja no Cais do Sodré, em Lisboa — um conceito diferente, sempre dentro do mundo dos smash burgers.</p>
+      </div>
+      <div class="exp-item">
+        <span class="num">02</span>
+        <h3 data-i18n="exp2_t">Food Truck de Verão</h3>
+        <p data-i18n="exp2_p">Este verão, a zona vai à estrada: Porto Covo, FMM — Festival Músicas do Mundo em Sines e Feira de Agosto em Grândola.</p>
+      </div>
+      <div class="exp-item">
+        <span class="num">03</span>
+        <h3 data-i18n="exp3_t">Franchise</h3>
+        <p data-i18n="exp3_p">Está em preparação um programa de franchise para quem quiser agarrar o conceito — sem nunca abdicar da qualidade.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- INSTAGRAM -->
+  <section class="insta reveal" id="instagram">
+    <span class="script" data-i18n="ig_script">segue a zona</span>
+    <h2>@thesmashzone.pt</h2>
+    <a class="btn" href="https://www.instagram.com/thesmashzone.pt/" target="_blank" rel="noopener" data-i18n="ig_cta">Seguir no Instagram</a>
+  </section>
+
+  <!-- LOCALIZAÇÃO -->
+  <section id="local">
+    <div class="sec-head reveal">
+      <span class="script" data-i18n="loc_script">vem ter connosco</span>
+      <h2 data-i18n-html="loc_title">Onde <mark>Estamos</mark></h2>
+    </div>
+    <h3 class="city-title reveal"><span class="pin" data-i18n="city_lisbon_pin">o original</span> Lisboa — Parque das Nações</h3>
+    <div class="loc">
+      <div class="loc-map reveal">
+        <iframe
+          title="Mapa — The Smash Zone, Kalorias Expo, Lisboa"
+          src="https://www.google.com/maps?q=The%20Smash%20Zone%2C%20Kalorias%20Expo%2C%20Passeio%20dos%20Her%C3%B3is%20do%20Mar%2C%201990-373%20Lisboa&output=embed"
+          loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+      </div>
+      <div class="loc-info">
+        <div class="info-block reveal">
+          <h3 data-i18n="loc_addr_t">Morada</h3>
+          <p>Kalorias Expo<br>Passeio dos Heróis do Mar<br>1990-373 Lisboa — <span data-i18n="loc_pq">Parque das Nações</span></p>
+        </div>
+        <div class="info-block reveal">
+          <h3 data-i18n="loc_hours_t">Horário</h3>
+          <div class="hours-row"><span class="d" data-i18n="h_week">Segunda a Sexta</span><span class="h">11:00–15:30 · 17:30–21:30</span></div>
+          <div class="hours-row"><span class="d" data-i18n="h_wknd">Sábado e Domingo</span><span class="h">11:00–22:00</span></div>
+        </div>
+        <div class="info-block reveal">
+          <h3 data-i18n="loc_call_t">Contacto</h3>
+          <a class="phone-big" href="tel:+351937422299">937 422 299</a>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="city-title reveal"><span class="pin" data-i18n="city_sines_pin">já abrimos</span> Sines</h3>
+    <div class="loc">
+      <div class="loc-map reveal">
+        <iframe
+          title="Mapa — The Smash Zone, Sines"
+          src="https://www.google.com/maps?q=The%20SMASH%20Zone%2C%20Quinta%20do%20Meio%2C%207520-313%20Sines&output=embed"
+          loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+      </div>
+      <div class="loc-info">
+        <div class="info-block reveal">
+          <h3 data-i18n="loc_addr_t2">Morada</h3>
+          <p>Q.ta do Meio<br>7520-313 Sines</p>
+        </div>
+        <div class="info-block reveal">
+          <h3 data-i18n="loc_hours_t2">Horário</h3>
+          <div class="hours-row"><span class="d" data-i18n="h_daily">Todos os dias</span><span class="h">12:00–15:00 · 18:30–22:00</span></div>
+        </div>
+        <div class="info-block reveal">
+          <h3 data-i18n="loc_call_t2">Contacto</h3>
+          <a class="phone-big" href="tel:+351914111791">914 111 791</a>
+        </div>
+        <div class="info-block reveal">
+          <h3 data-i18n="loc_extra_t">No Espaço</h3>
+          <p data-i18n="loc_extra_p">28 lugares no interior · DJ aos finais de tarde de sexta-feira · Menu estudante de segunda a quarta, das 12h às 15h.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <a class="brand" href="#top"><b>THE <em>SMASH</em> ZONE</b></a>
+  <p data-i18n="footer_note">© 2026 The Smash Zone · Lisboa · Sines</p>
+  <div class="social"><a href="https://www.instagram.com/thesmashzone.pt/" target="_blank" rel="noopener">Instagram ↗</a></div>
+</footer>
+
+<script>
+/* ---------- i18n ---------- */
+const I18N = {
+  pt: {
+    brand_tag:"lisboa",
+    nav_menu:"Menu", nav_story:"História", nav_find:"Onde Estamos",
+    hero_kicker:"esmagados na chapa, sem atalhos",
+    hero_sub:"Smash burgers 100% Angus esmagados na chapa sem adição de gordura, servidos em pão de batata-doce. A indulgência saudável, no Parque das Nações e em Sines.",
+    hero_cta1:"Ver o Menu", hero_cta2:"Ligar · 937 422 299",
+    marquee:["100% Angus","Pão de batata-doce","Sem adição de gordura","Esmagado na chapa","Parque das Nações"],
+    menu_script:"sem truques, sem atalhos",
+    menu_title:"O <mark>Menu</mark>",
+    tag_classic:"O Clássico",
+    smash_desc:"100% Angus esmagado na chapa, queijo Cheddar, picles de pepino, cebola crua, ketchup e mostarda, em pão de batata-doce.",
+    mini_note:"(metade do tamanho)",
+    menus_title:"Menus", menus_desc:"Qualquer smash com batatas e bebida incluídas.",
+    menus_from:"Menus desde", menu_family:"Menu Família",
+    menu_student:"Menu Estudante · Sines",
+    family_desc:"Família: 1 smash duplo + 2 simples + 3 doses de batatas + 3 bebidas. Estudante: seg–qua, 12h–15h, com cartão de estudante.",
+    allday_title:"All Day", allday_desc:"Para o pequeno-almoço, lanche ou versões mais leves.",
+    icecream:"Gelado · baunilha, morango ou mix",
+    egg_desc:"Ovos mexidos ou estrelados com queijo Cheddar dentro do pão.",
+    menu_note:"<b>Sabemos exatamente o que estamos a consumir:</b> carne 100% Angus esmagada na chapa sem adição de gordura, envolvida num pão de batata-doce.",
+    story_script:"de uma ideia em casa…",
+    story_title:"A Nossa <mark>História</mark>",
+    story_p1:"Tudo começou em casa, quando o Guilherme, filho mais velho de Maria João Salgado, decidiu que queria abrir um restaurante — numa altura em que a febre dos smash burgers ainda não tinha tomado conta de Lisboa.",
+    story_p2:"Dois anos depois, o projeto ganhou forma no espaço Kalorias, no Parque das Nações, do qual Maria João é sócia fundadora. Foi o Guilherme quem lançou a semente e definiu o produto: o tipo de carne, o pão e as combinações. Um hambúrguer que pudesse ser uma indulgência saudável.",
+    story_p3:"Hoje, Maria João e Miguel Vaz levam o conceito mais longe: carne Angus maturada durante 14 dias, frita na sua própria gordura — a reação de Maillard carameliza a carne e dá-lhe um paladar fora do normal. Em abril de 2026 chegaram a Sines, a terra natal de ambos.",
+    quote_text:"“Não há truques, não há atalhos. Aqui sabemos exatamente o que estamos a consumir.”",
+    stat_angus:"Carne Angus", stat_aged:"Dias de maturação", stat_fat:"Gordura adicionada",
+    pol1:"Smash na chapa · 100% Angus", pol1_cap:"o original",
+    pol2:"Pretos, amarelos & muitos néons", pol2_cap:"o nosso espaço",
+    exp_script:"a zona está a crescer",
+    exp_title:"Próximas <mark>Paragens</mark>",
+    exp1_t:"Cais do Sodré", exp1_p:"Está em preparação uma nova loja no Cais do Sodré, em Lisboa — um conceito diferente, sempre dentro do mundo dos smash burgers.",
+    exp2_t:"Food Truck de Verão", exp2_p:"Este verão, a zona vai à estrada: Porto Covo, FMM — Festival Músicas do Mundo em Sines e Feira de Agosto em Grândola.",
+    exp3_t:"Franchise", exp3_p:"Está em preparação um programa de franchise para quem quiser agarrar o conceito — sem nunca abdicar da qualidade.",
+    ig_script:"segue a zona", ig_cta:"Seguir no Instagram",
+    loc_script:"vem ter connosco",
+    loc_title:"Onde <mark>Estamos</mark>",
+    loc_addr_t:"Morada", loc_pq:"Parque das Nações",
+    loc_hours_t:"Horário", h_week:"Segunda a Sexta", h_wknd:"Sábado e Domingo",
+    loc_call_t:"Contacto", loc_addr_t2:"Morada", loc_call_t2:"Contacto",
+    loc_hours_t2:"Horário", h_daily:"Todos os dias",
+    loc_extra_t:"No Espaço",
+    loc_extra_p:"28 lugares no interior · DJ aos finais de tarde de sexta-feira · Menu estudante de segunda a quarta, das 12h às 15h.",
+    city_lisbon_pin:"o original", city_sines_pin:"já abrimos",
+    footer_note:"© 2026 The Smash Zone · Lisboa · Sines",
+    badge_text:"100% ANGUS · PÃO DE BATATA-DOCE · "
+  },
+  en: {
+    brand_tag:"lisbon",
+    nav_menu:"Menu", nav_story:"Our Story", nav_find:"Find Us",
+    hero_kicker:"smashed on the griddle, no shortcuts",
+    hero_sub:"100% Angus smash burgers, pressed on the griddle with no added fat, served in a sweet-potato bun. The healthy indulgence — in Parque das Nações and Sines.",
+    hero_cta1:"See the Menu", hero_cta2:"Call · 937 422 299",
+    marquee:["100% Angus","Sweet-potato bun","No added fat","Smashed on the griddle","Parque das Nações"],
+    menu_script:"no tricks, no shortcuts",
+    menu_title:"The <mark>Menu</mark>",
+    tag_classic:"The Classic",
+    smash_desc:"100% Angus smashed on the griddle, Cheddar cheese, cucumber pickles, raw onion, ketchup and mustard, in a sweet-potato bun.",
+    mini_note:"(half size)",
+    menus_title:"Meal Deals", menus_desc:"Any smash with fries and a drink included.",
+    menus_from:"Meals from", menu_family:"Family Meal",
+    menu_student:"Student Meal · Sines",
+    family_desc:"Family: 1 double smash + 2 singles + 3 fries + 3 drinks. Student: Mon–Wed, 12pm–3pm, with student card.",
+    allday_title:"All Day", allday_desc:"For breakfast, a snack, or lighter options.",
+    icecream:"Ice cream · vanilla, strawberry or mix",
+    egg_desc:"Scrambled or fried eggs with Cheddar cheese in the bun.",
+    menu_note:"<b>We know exactly what we're eating:</b> 100% Angus beef smashed on the griddle with no added fat, wrapped in a sweet-potato bun.",
+    story_script:"from an idea at home…",
+    story_title:"Our <mark>Story</mark>",
+    story_p1:"It all started at home, when Guilherme, Maria João Salgado's eldest son, decided he wanted to open a restaurant — back when the smash burger craze hadn't yet taken over Lisbon.",
+    story_p2:"Two years later, the project took shape at the Kalorias gym in Parque das Nações, of which Maria João is a founding partner. Guilherme planted the seed and defined the product: the beef, the bun and the combinations. A burger that could be a healthy indulgence.",
+    story_p3:"Today, Maria João and Miguel Vaz are taking the concept further: Angus beef dry-aged for 14 days, fried in its own fat — the Maillard reaction caramelises the meat and gives it an out-of-the-ordinary flavour. In April 2026 they arrived in Sines, their hometown.",
+    quote_text:"“No tricks, no shortcuts. Here we know exactly what we're eating.”",
+    stat_angus:"Angus beef", stat_aged:"Days dry-aged", stat_fat:"Added fat",
+    pol1:"Smashed on the griddle · 100% Angus", pol1_cap:"the original",
+    pol2:"Black, yellow & lots of neon", pol2_cap:"our space",
+    exp_script:"the zone is growing",
+    exp_title:"Next <mark>Stops</mark>",
+    exp1_t:"Cais do Sodré", exp1_p:"A new shop is in the works at Cais do Sodré, Lisbon — a different concept, still within the world of smash burgers.",
+    exp2_t:"Summer Food Truck", exp2_p:"This summer, the zone hits the road: Porto Covo, FMM — Festival Músicas do Mundo in Sines, and the Feira de Agosto in Grândola.",
+    exp3_t:"Franchise", exp3_p:"A franchise programme is in the works for anyone who wants to run with the concept — without ever compromising on quality.",
+    ig_script:"follow the zone", ig_cta:"Follow on Instagram",
+    loc_script:"come find us",
+    loc_title:"Find <mark>Us</mark>",
+    loc_addr_t:"Address", loc_pq:"Parque das Nações",
+    loc_hours_t:"Opening Hours", h_week:"Monday to Friday", h_wknd:"Saturday & Sunday",
+    loc_call_t:"Contact", loc_addr_t2:"Address", loc_call_t2:"Contact",
+    loc_hours_t2:"Opening Hours", h_daily:"Every day",
+    loc_extra_t:"At the Shop",
+    loc_extra_p:"28 seats inside · DJ on Friday evenings · Student meal Monday to Wednesday, 12pm–3pm.",
+    city_lisbon_pin:"the original", city_sines_pin:"now open",
+    footer_note:"© 2026 The Smash Zone · Lisbon · Sines",
+    badge_text:"100% ANGUS · SWEET-POTATO BUN · "
+  }
+};
+
+function setLang(lang){
+  const dict = I18N[lang];
+  document.documentElement.lang = lang === 'pt' ? 'pt' : 'en';
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const k = el.getAttribute('data-i18n');
+    if (dict[k] !== undefined) el.textContent = dict[k];
+  });
+  document.querySelectorAll('[data-i18n-html]').forEach(el => {
+    const k = el.getAttribute('data-i18n-html');
+    if (dict[k] !== undefined) el.innerHTML = dict[k];
+  });
+  buildMarquee(dict.marquee);
+  document.getElementById('btn-pt').classList.toggle('active', lang === 'pt');
+  document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+  try { localStorage.setItem('tsz-lang', lang); } catch(e) {}
+}
+
+function buildMarquee(words){
+  const seq = words.map(w => `<span>${w} ★</span>`).join('');
+  document.getElementById('marquee-track').innerHTML = seq.repeat(6);
+}
+
+/* ---------- scroll reveals ---------- */
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+}, { threshold: .12 });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+/* ---------- init ---------- */
+let saved = 'pt';
+try { saved = localStorage.getItem('tsz-lang') || 'pt'; } catch(e) {}
+setLang(saved);
+</script>
+<script src="no-inspect.js"></script>
+</body>
+</html>
